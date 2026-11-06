@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daniela Heels | Cantante de soul, funky y jazz en Ibiza</title>
+<meta name="description" content="Daniela Heels, cantante de soul, funky y jazz en Ibiza. Música en directo para eventos, bodas y restaurantes. Contacto por WhatsApp: 651 741 512.">
+<meta property="og:title" content="Daniela Heels | Cantante">
+<meta property="og:description" content="Soul, funky y jazz en directo en Ibiza.">
+<meta property="og:image" content="fotos/10.jpg">
+<link rel="icon" href="fotos/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,600;1,6..96,700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: full-bleed night-club hero over a B&W photo, italic Didone headlines, gold from the logo as the only colour. */
+:root {
+  --ink: #0b0807;        /* page ground */
+  --ink-2: #16110e;      /* raised surface */
+  --gold: #d4a24c;       /* accent, from the logo */
+  --gold-hi: #f0cd84;    /* highlight */
+  --gold-lo: #a8742c;    /* shadow */
+  --cream: #f5efe6;      /* text */
+  --muted: #b3a89a;      /* secondary text */
+  --line: rgba(212,162,76,.22);
+  --display: "Bodoni Moda", "Bodoni 72", "Didot", Georgia, serif;
+  --body: "Manrope", "Segoe UI", system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+body { background: var(--ink); color: var(--cream); font-family: var(--body); font-size: 17px; line-height: 1.65; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--ink); }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.label { font-size: 12px; font-weight: 800; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); }
+h1, h2, h3 { font-family: var(--display); font-style: italic; font-weight: 700; line-height: 1; text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(42px, 6vw, 76px); letter-spacing: -.01em; }
+p { margin: 0; }
+
+/* Header */
+header { position: fixed; top: env(safe-area-inset-top, 0px); left: 0; right: 0; z-index: 9; transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
+header.solid { background: rgba(11,8,7,.9); backdrop-filter: blur(10px); border-color: var(--line); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.logo { display: block; line-height: 0; }
+.logo img { height: 46px; width: auto; }
+nav ul { list-style: none; display: flex; gap: 32px; margin: 0; padding: 0; }
+nav a { text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(245,239,230,.8); transition: color .2s; }
+nav a:hover { color: var(--gold-hi); }
+.menu-btn { display: none; background: none; border: 1px solid var(--line); color: var(--cream); border-radius: 999px; padding: 8px 16px; font: 700 12px var(--body); letter-spacing: .14em; text-transform: uppercase; cursor: pointer; }
+@media (max-width: 860px) {
+  .menu-btn { display: block; }
+  nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--ink); border-bottom: 1px solid var(--line); }
+  nav ul { flex-direction: column; gap: 0; padding: 8px max(24px, env(safe-area-inset-right, 0px)) 18px max(24px, env(safe-area-inset-left, 0px)); }
+  nav a { display: block; padding: 13px 0; font-size: 14px; }
+  .logo img { height: 38px; }
+}
+
+/* Buttons */
+.cta { display: flex; flex-wrap: wrap; gap: 16px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-weight: 800; font-size: 14px; letter-spacing: .1em; text-transform: uppercase; padding: 17px 32px; border-radius: 999px; transition: transform .2s, box-shadow .2s, background .2s; cursor: pointer; font-family: var(--body); border: 1px solid transparent; }
+.btn-gold { background: linear-gradient(135deg, var(--gold-hi), var(--gold) 45%, var(--gold-lo)); color: var(--ink); box-shadow: 0 8px 30px rgba(212,162,76,.35); }
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(212,162,76,.5); }
+.btn-line { border-color: rgba(245,239,230,.45); color: var(--cream); background: transparent; }
+.btn-line:hover { border-color: var(--gold); color: var(--gold-hi); }
+
+/* Hero */
+.hero { position: relative; min-height: clamp(600px, 94vh, 940px); display: flex; align-items: center; background: url("fotos/02.jpg") 78% 30% / cover no-repeat var(--ink); overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: 0; background:
+  linear-gradient(90deg, rgba(11,8,7,.92) 0%, rgba(11,8,7,.72) 38%, rgba(11,8,7,.15) 70%, rgba(11,8,7,.25) 100%),
+  linear-gradient(0deg, var(--ink) 0%, transparent 22%); }
+.hero .wrap { position: relative; width: 100%; padding-block: 120px 80px; }
+.hero h1 { font-size: clamp(84px, 12.5vw, 196px); line-height: .9; margin-top: 22px; letter-spacing: -.015em; }
+.hero h1 span { display: block; }
+.hero .lede { margin-top: 28px; max-width: 34ch; font-size: 19px; color: rgba(245,239,230,.75); }
+.hero .cta { margin-top: 40px; }
+.hero h1, .hero .label, .hero .lede, .hero .cta { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+.hero .label { animation-delay: .05s; } .hero h1 { animation-delay: .15s; } .hero .lede { animation-delay: .3s; } .hero .cta { animation-delay: .42s; }
+@keyframes rise { from { transform: translateY(18px); } to { transform: none; } }
+@media (max-width: 760px) {
+  .hero { background-position: 72% 20%; min-height: 680px; align-items: flex-end; }
+  .hero::before { background: linear-gradient(0deg, var(--ink) 8%, rgba(11,8,7,.75) 45%, rgba(11,8,7,.2) 80%); }
+  .hero .wrap { padding-block: 120px 56px; }
+}
+
+section { padding-block: 110px; }
+.sec-head { display: grid; gap: 18px; margin-bottom: 52px; }
+
+/* About */
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.about-photo { aspect-ratio: 4/5; width: 100%; max-width: 100%; border-radius: 6px; background: url("fotos/10.jpg") 45% 20% / cover no-repeat var(--ink-2); }
+.about-text { min-width: 0; display: grid; gap: 22px; max-width: 58ch; padding-top: 24px; }
+.about-text h2 { margin-bottom: 26px; }
+.about-text p { color: var(--muted); }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 18px; padding-top: 26px; border-top: 1px solid var(--line); }
+.facts div { display: grid; gap: 8px; align-content: start; }
+.facts dt { margin: 0; font-size: 11px; }
+.facts dd { margin: 0; font-size: 15px; color: var(--cream); }
+@media (max-width: 860px) { .about { grid-template-columns: 1fr; gap: 40px; } .about-photo { aspect-ratio: 4/4.4; } .about-text { padding-top: 0; } }
+@media (max-width: 520px) { .facts { grid-template-columns: 1fr; } }
+
+/* Videos */
+.videos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; }
+.video { position: relative; display: flex; align-items: flex-end; text-decoration: none; border-radius: 6px; overflow: hidden; min-height: 240px; background-size: cover; background-position: center; isolation: isolate; }
+.video::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(11,8,7,.92), rgba(11,8,7,.2) 65%); transition: background .3s; }
+.video:hover::before { background: linear-gradient(0deg, rgba(11,8,7,.85), rgba(11,8,7,.05) 65%); }
+.video.big { grid-row: span 2; min-height: 520px; }
+.video-body { display: flex; align-items: center; gap: 18px; padding: 26px; width: 100%; }
+.play { width: 58px; height: 58px; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; background: linear-gradient(135deg, var(--gold-hi), var(--gold) 45%, var(--gold-lo)); box-shadow: 0 6px 24px rgba(212,162,76,.4); transition: transform .2s; }
+.play svg { width: 18px; height: 18px; fill: var(--ink); margin-left: 3px; }
+.video:hover .play { transform: scale(1.08); }
+.video h3 { font-size: clamp(28px, 3.4vw, 44px); }
+.video.big h3 { font-size: clamp(36px, 5vw, 64px); }
+.video small { display: block; font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.yt-note { margin-top: 26px; font-size: 14px; color: var(--muted); }
+.yt-note a { color: var(--gold-hi); }
+@media (max-width: 760px) { .videos { grid-template-columns: 1fr; } .video.big { grid-row: auto; min-height: 380px; } }
+
+/* Events */
+.events { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.next { border: 1px solid var(--line); border-radius: 6px; padding: 44px; display: grid; gap: 18px; background: radial-gradient(120% 120% at 0% 0%, rgba(212,162,76,.12), transparent 60%), var(--ink-2); }
+.next h3 { font-size: clamp(34px, 4vw, 50px); }
+.next p { color: var(--muted); }
+.next .cta { margin-top: 8px; }
+.stage-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.stage-list li { display: grid; grid-template-columns: 130px 1fr; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.stage-list .label { font-size: 11px; padding-top: 4px; }
+.stage-list li span:last-child { color: var(--cream); }
+@media (max-width: 860px) { .events { grid-template-columns: 1fr; } .next { padding: 30px; } .stage-list li { grid-template-columns: 1fr; gap: 4px; } }
+
+/* Gallery */
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; grid-auto-flow: dense; gap: 12px; }
+.gallery button { border: 0; padding: 0; border-radius: 6px; cursor: zoom-in; background-size: cover; background-color: var(--ink-2); width: 100%; height: 100%; filter: saturate(.9); transition: filter .3s, transform .3s; }
+.gallery button:hover { filter: saturate(1.1) brightness(1.05); }
+.gallery .tall { grid-row: span 2; }
+.gallery .wide { grid-column: span 2; }
+@media (max-width: 760px) { .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; } }
+.lightbox { position: fixed; inset: 0; z-index: 20; background: rgba(6,4,3,.95); display: grid; place-items: center; padding: max(20px, env(safe-area-inset-top, 0px)) max(20px, env(safe-area-inset-right, 0px)) max(20px, env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px)); }
+.lightbox img { max-width: min(92vw, 1400px); max-height: 84vh; width: auto; height: auto; border-radius: 6px; }
+.lb-btn { position: absolute; background: var(--ink-2); color: var(--gold-hi); border: 1px solid var(--line); width: 50px; height: 50px; border-radius: 50%; font-size: 22px; cursor: pointer; }
+.lb-prev { left: max(16px, env(safe-area-inset-left, 0px)); top: 50%; }
+.lb-next { right: max(16px, env(safe-area-inset-right, 0px)); top: 50%; }
+.lb-close { right: max(16px, env(safe-area-inset-right, 0px)); top: max(16px, env(safe-area-inset-top, 0px)); }
+
+/* Contact */
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.contact-info { display: grid; gap: 28px; align-content: start; min-width: 0; }
+.contact-info p { color: var(--muted); max-width: 40ch; }
+.phone { font-family: var(--display); font-style: italic; font-weight: 700; font-size: clamp(40px, 5vw, 60px); line-height: 1; color: var(--gold-hi); user-select: all; }
+.email { font-size: clamp(18px, 2.2vw, 24px); font-weight: 600; color: var(--cream); user-select: all; overflow-wrap: anywhere; }
+.copy { background: none; border: 1px solid var(--line); color: var(--muted); font: 700 12px var(--body); letter-spacing: .12em; text-transform: uppercase; padding: 8px 16px; border-radius: 999px; cursor: pointer; margin-top: 14px; }
+.copy:hover { color: var(--gold-hi); border-color: var(--gold); }
+.socials { display: flex; flex-wrap: wrap; gap: 10px; }
+.socials { gap: 14px; }
+.socials a { display: inline-flex; border-radius: 50%; border: 1px solid var(--line); padding: 3px; transition: border-color .2s; }
+.socials svg { width: 52px; height: 52px; padding: 12px; border-radius: 50%; color: var(--gold); background: rgba(212,162,76,.12); transition: background .2s, color .2s; flex-shrink: 0; }
+.socials a:hover { border-color: var(--gold); color: var(--gold-hi); }
+.socials a:hover svg { background: linear-gradient(135deg, var(--gold-hi), var(--gold) 45%, var(--gold-lo)); color: var(--ink); }
+form { display: grid; gap: 18px; min-width: 0; background: var(--ink-2); border: 1px solid var(--line); border-radius: 6px; padding: 36px; }
+.field { display: grid; gap: 8px; }
+label { font-size: 11px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+input, select, textarea { width: 100%; background: var(--ink); border: 1px solid rgba(245,239,230,.14); color: var(--cream); border-radius: 4px; padding: 13px 15px; font: 16px var(--body); }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--gold); }
+textarea { min-height: 130px; resize: vertical; }
+.form-note { font-size: 13px; color: var(--muted); }
+@media (max-width: 860px) { .contact { grid-template-columns: 1fr; gap: 44px; } form { padding: 26px; } }
+
+/* Floating WhatsApp */
+.wa-float { position: fixed; z-index: 15; right: calc(22px + env(safe-area-inset-right, 0px)); bottom: calc(22px + env(safe-area-inset-bottom, 0px)); width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--gold-hi), var(--gold) 45%, var(--gold-lo)); box-shadow: 0 10px 30px rgba(0,0,0,.45), 0 0 0 0 rgba(212,162,76,.5); animation: ring 2.8s ease-out infinite; transition: transform .2s; }
+.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 32px; height: 32px; }
+.wa-float .tip { position: absolute; right: 74px; white-space: nowrap; background: var(--ink-2); color: var(--cream); border: 1px solid var(--line); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 8px 14px; border-radius: 999px; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; pointer-events: none; }
+.wa-float:hover .tip, .wa-float:focus-visible .tip { opacity: 1; transform: none; }
+@keyframes ring { 0% { box-shadow: 0 10px 30px rgba(0,0,0,.45), 0 0 0 0 rgba(212,162,76,.55); } 70%, 100% { box-shadow: 0 10px 30px rgba(0,0,0,.45), 0 0 0 16px rgba(212,162,76,0); } }
+@media (max-width: 560px) { .wa-float { width: 56px; height: 56px; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); } .wa-float .tip { display: none; } }
+
+footer { border-top: 1px solid var(--line); padding-block: 48px 110px; }
+footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; font-size: 13px; color: var(--muted); }
+footer img { height: 64px; width: auto; }
+</style>
+
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<header id="top-bar">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="Daniela Heels, inicio"><img src="fotos/logo.png" alt="Daniela Heels Music"></a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu">
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#videos">Vídeos</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero" role="img" aria-label="Daniela Heels de perfil, en blanco y negro">
+    <div class="wrap">
+      <div class="label">Cantante · Soul · Funky · Jazz</div>
+      <h1><span>Daniela</span><span>Heels</span></h1>
+      <p class="lede">Soul, funky y jazz en directo para tu evento o celebración en Ibiza.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#videos">Escuchar</a>
+        <a class="btn btn-line" href="#contacto">Contrátala</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="sobre-mi">
+    <div class="wrap about">
+      <div class="about-photo" role="img" aria-label="Daniela Heels con encaje negro y micrófono vintage"></div>
+      <div class="about-text">
+        <div class="label">Sobre mí</div>
+        <h2>La voz detrás de la noche</h2>
+        <p>Daniela Heels es cantante, con raíces madrileñas y andaluzas, y vive en Ibiza desde los 14 años. Tiene una voz especialmente dotada para el soul, el funky y los grandes estándares del jazz.</p>
+        <p>En su espectáculo interpreta versiones de artistas como Amy Winehouse, Whitney Houston o Loren Allred, entre otros referentes de estos géneros. Actúa en solitario, con voz en directo sobre bases pregrabadas, o acompañada de distintos músicos de la isla.</p>
+        <p>También ha participado en musicales como Grease, Aladdin y La Cuenta Atrás, esta última creada por el director, actor y productor ibicenco Marcos Penschow.</p>
+        <dl class="facts">
+          <div><dt class="label">En solitario</dt><dd>Voz en directo con bases</dd></div>
+          <div><dt class="label">Con banda</dt><dd>Músicos de la isla</dd></div>
+          <div><dt class="label">Musicales</dt><dd>Grease · Aladdin · La Cuenta Atrás</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Vídeos</div>
+        <h2>En directo</h2>
+      </div>
+      <div class="videos">
+        <a class="video big" href="https://www.youtube.com/watch?v=pUMpLty5a-Q" target="_blank" rel="noopener" style="background-image:url('fotos/08.jpg')">
+          <span class="video-body">
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 1l13 7-13 7z"/></svg></span>
+            <span><small>Ver en YouTube</small><h3>Valerie</h3></span>
+          </span>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=tGCfR-4YKW0" target="_blank" rel="noopener" style="background-image:url('fotos/06.jpg'); background-position: 45% 30%">
+          <span class="video-body">
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 1l13 7-13 7z"/></svg></span>
+            <span><small>Ver en YouTube</small><h3>Freedom</h3></span>
+          </span>
+        </a>
+        <a class="video" href="https://www.youtube.com/watch?v=nEg000yARhY" target="_blank" rel="noopener" style="background-image:url('fotos/04.jpg')">
+          <span class="video-body">
+            <span class="play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M2 1l13 7-13 7z"/></svg></span>
+            <span><small>Ver en YouTube</small><h3>Seven Nation Army</h3></span>
+          </span>
+        </a>
+      </div>
+      <p class="yt-note">Los vídeos se abren en YouTube. Hay más en su <a href="https://www.youtube.com/@danielaheels8879" target="_blank" rel="noopener">canal de YouTube</a>.</p>
+    </div>
+  </section>
+
+  <section id="eventos">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Eventos</div>
+        <h2>Sobre el escenario</h2>
+      </div>
+      <div class="events">
+        <div class="next">
+          <div class="label">Próximas fechas</div>
+          <h3>Próximamente nuevas fechas</h3>
+          <p>Las próximas actuaciones se anuncian en Instagram. Para bodas, restaurantes y eventos privados, escríbele y te cuenta formatos y disponibilidad.</p>
+          <div class="cta">
+            <a class="btn btn-gold" href="https://www.instagram.com/danielaheelsmusic/" target="_blank" rel="noopener">Seguir en Instagram</a>
+          </div>
+        </div>
+        <ul class="stage-list">
+          <li><span class="label">Escenario</span><span>Oyster Ibiza: espectáculo propio y domingos musicales</span></li>
+          <li><span class="label">Teatro</span><span>Musicales Grease, Aladdin y La Cuenta Atrás</span></li>
+          <li><span class="label">Programa</span><span>Artista de Sant Josep és Música</span></li>
+          <li><span class="label">Repertorio</span><span>Amy Winehouse, Whitney Houston, Loren Allred y clásicos del soul y el jazz</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Galería</div>
+        <h2>Momentos</h2>
+      </div>
+      <div class="gallery" id="gallery">
+        <button class="wide" data-src="08.jpg" style="background-position:50% 55%" aria-label="Ampliar: en el escenario con bailarinas"></button>
+        <button class="tall" data-src="02.jpg" style="background-position:72% 30%" aria-label="Ampliar: de perfil en blanco y negro"></button>
+        <button class="tall" data-src="07.jpg" style="background-position:50% 30%" aria-label="Ampliar: con micrófono vintage"></button>
+        <button class="wide" data-src="05.jpg" style="background-position:50% 35%" aria-label="Ampliar: primer plano cantando"></button>
+        <button class="tall" data-src="01.jpg" style="background-position:40% 30%" aria-label="Ampliar: escenario al aire libre"></button>
+        <button class="wide" data-src="03.jpg" style="background-position:55% 40%" aria-label="Ampliar: concierto junto a un guitarrista"></button>
+        <button data-src="06.jpg" style="background-position:45% 30%" aria-label="Ampliar: cantando con la mano en alto"></button>
+        <button class="wide" data-src="04.jpg" style="background-position:45% 50%" aria-label="Ampliar: con banda en directo"></button>
+        <button data-src="09.jpg" style="background-position:55% 30%" aria-label="Ampliar: concierto al atardecer"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap contact">
+      <div class="contact-info">
+        <div class="label">Contacto</div>
+        <h2>Hablemos de tu evento</h2>
+        <p>Conciertos, bodas, restaurantes, colaboraciones o prensa. Escríbele por WhatsApp o por email.</p>
+        <div>
+          <div class="label" style="margin-bottom:10px">WhatsApp</div>
+          <div class="phone" id="phone">651 741 512</div>
+          <button class="copy" data-copy="651741512" data-target="phone" type="button">Copiar número</button>
+        </div>
+        <div>
+          <div class="label" style="margin-bottom:10px">Email</div>
+          <div class="email" id="email">info@danielaheelsmusic.com</div>
+          <button class="copy" data-copy="info@danielaheelsmusic.com" data-target="email" type="button">Copiar email</button>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/danielaheelsmusic/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/danielaheels" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21z" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/@danielaheels8879" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4.5" fill="currentColor"/><path d="M10 9v6l5.2-3z" fill="#0b0807"/></svg></a>
+        </div>
+      </div>
+      <form id="contact-form">
+        <div class="field"><label for="f-name">Nombre</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-reason">Motivo</label>
+          <select id="f-reason" name="reason">
+            <option>Concierto o evento</option>
+            <option>Boda</option>
+            <option>Colaboración</option>
+            <option>Prensa</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-date">Fecha y lugar</label><input id="f-date" name="date" placeholder="Ej.: 14 de junio, Sant Josep"></div>
+        <div class="field"><label for="f-msg">Mensaje</label><textarea id="f-msg" name="msg" required></textarea></div>
+        <a class="btn btn-gold" id="wa-link" href="https://wa.me/34651741512" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+        <p class="form-note">Se abrirá WhatsApp con tu mensaje ya escrito. Solo tienes que pulsar enviar.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="fotos/logo.png" alt="Daniela Heels Music">
+    <span>Soul · Funky · Jazz · Ibiza · © 2026</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/34651741512?text=Hola%20Daniela%2C%20te%20escribo%20desde%20tu%20web." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <span class="tip">Escríbeme</span>
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5A12.5 12.5 0 0 0 5.2 22.3L3.6 28.4l6.3-1.6A12.5 12.5 0 1 0 16 3.5z" fill="none" stroke="#0b0807" stroke-width="2.4" stroke-linejoin="round"/><path d="M11.6 9.6c.4-.4 1-.4 1.3 0l1.6 2.1c.3.4.3.9-.1 1.3l-.9.9c.7 1.6 2 2.9 3.6 3.6l.9-.9c.4-.4.9-.4 1.3-.1l2.1 1.6c.4.3.4.9 0 1.3l-1 1c-.9.9-2.3 1.1-3.4.5-2.9-1.5-5.2-3.8-6.7-6.7-.6-1.1-.4-2.5.5-3.4z" fill="#0b0807"/></svg>
+</a>
+
+<div class="lightbox" id="lightbox" hidden>
+  <img id="lb-photo" alt="">
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Foto anterior">‹</button>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Foto siguiente">›</button>
+  <button class="lb-btn lb-close" id="lb-close" aria-label="Cerrar">×</button>
+</div>
+
+<script>
+// Header turns solid after the hero starts scrolling
+const bar = document.getElementById('top-bar');
+const onScroll = () => bar.classList.toggle('solid', window.scrollY > 40);
+window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// Mobile menu
+const menuBtn = document.getElementById('menu-btn');
+const nav = document.getElementById('menu');
+function setMenu(open) {
+  menuBtn.setAttribute('aria-expanded', open);
+  nav.hidden = window.matchMedia('(max-width: 860px)').matches ? !open : false;
+  if (open) bar.classList.add('solid'); else onScroll();
+}
+setMenu(false);
+menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+nav.addEventListener('click', e => { if (e.target.tagName === 'A') setMenu(false); });
+window.addEventListener('resize', () => setMenu(false));
+
+// Copy phone
+document.querySelectorAll('.copy').forEach(btn => btn.addEventListener('click', () => {
+  navigator.clipboard.writeText(btn.dataset.copy).then(() => { btn.textContent = 'Copiado'; }).catch(() => {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById(btn.dataset.target));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selecciona y copia';
+  });
+}));
+
+// WhatsApp message builder
+const form = document.getElementById('contact-form');
+const wa = document.getElementById('wa-link');
+function buildWa() {
+  const v = id => document.getElementById(id).value.trim();
+  const lines = ['Hola Daniela, soy ' + (v('f-name') || '…') + '.', 'Motivo: ' + v('f-reason')];
+  if (v('f-date')) lines.push('Fecha y lugar: ' + v('f-date'));
+  if (v('f-msg')) lines.push('', v('f-msg'));
+  wa.href = 'https://wa.me/34651741512?text=' + encodeURIComponent(lines.join('\n'));
+}
+form.addEventListener('input', buildWa);
+form.addEventListener('submit', e => e.preventDefault());
+buildWa();
+
+// Gallery + lightbox
+const shots = [...document.querySelectorAll('#gallery button')];
+shots.forEach(s => { s.style.backgroundImage = 'url("fotos/' + s.dataset.src + '")'; });
+const lb = document.getElementById('lightbox');
+const lbPhoto = document.getElementById('lb-photo');
+let idx = 0;
+function show(i) {
+  idx = (i + shots.length) % shots.length;
+  const s = shots[idx];
+  lbPhoto.src = 'fotos/' + s.dataset.src;
+  lbPhoto.alt = s.getAttribute('aria-label').replace('Ampliar: ', '');
+}
+shots.forEach((s, i) => s.addEventListener('click', () => { show(i); lb.hidden = false; document.getElementById('lb-close').focus(); }));
+document.getElementById('lb-prev').addEventListener('click', () => show(idx - 1));
+document.getElementById('lb-next').addEventListener('click', () => show(idx + 1));
+document.getElementById('lb-close').addEventListener('click', () => { lb.hidden = true; shots[idx].focus(); });
+lb.addEventListener('click', e => { if (e.target === lb) lb.hidden = true; });
+document.addEventListener('keydown', e => {
+  if (lb.hidden) return;
+  if (e.key === 'Escape') lb.hidden = true;
+  if (e.key === 'ArrowLeft') show(idx - 1);
+  if (e.key === 'ArrowRight') show(idx + 1);
+});
+</script>
+
+</body>
+</html>
